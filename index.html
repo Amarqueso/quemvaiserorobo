@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem vai ser o robo?</title>
+</head>
+<body>
+
+    <script>
+        function sortear() {
+            var escolha = Math.floor(Math.random() * 9);
+            
+            if (escolha < 3) {
+                alert(document.querySelector(".nome1").value);
+            }
+            else if (escolha >= 3 &&  escolha < 5){
+                alert(document.querySelector(".nome2").value);
+            }
+            else if (escolha >= 5 &&  escolha < 7 ){
+                alert( document.querySelector(".nome3").value);
+            }
+            else {
+                alert(document.querySelector(".nome4").value);
+            }
+
+
+        }
+
+    </script>
+    <style>
+        h1 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1e42b9;
+            padding-top: 50px;
+            font-size: 50px;
+        }
+        form {
+            margin: auto;
+            margin-top: 10%;
+            height: 800px;
+            width: 550px;
+            text-align: center;
+            background-color: #ffffff;
+            opacity: 92%;
+            border-radius: 20px;
+            border: 10px solid white;
+            padding-top: 50px;
+            transition: transform 0.5s ease-in;
+            z-index: 1;
+            
+        }
+        input {
+            height: 20px;
+            transition: transform 0.3s ease-in;
+        }
+        
+        input:hover {
+            transform: scale(1.025);
+        }
+
+        label {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #000000;
+            font-size: 20px;  
+        }
+        
+        body {
+            padding: 0;
+            margin: 0;
+              
+        }
+
+        .background-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('img.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: blur(4px); /* Aplica o blur apenas na imagem */
+            z-index: 0; /* Garante que a imagem fique atrás do formulário */
+        }
+
+        form:hover {
+            background-color: rgb(255, 255, 255); 
+            transform: scale(1.02);
+        }
+
+        button {
+            transition-duration: 0.4s;
+            width: 200px;
+            height: 50px;
+             
+            
+        }
+        button:hover {
+            background-color: rgb(75, 74, 74); 
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            transform: scale(1.25);
+        }
+
+        .footer {
+            background-color: rgb(75, 74, 74);
+            opacity: 75%;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        
+
+    </style>
+
+    
+    <div class="background-container"></div>
+    <form>
+    <img src="https://images.squarespace-cdn.com/content/v1/5b6db491365f026132322363/1561403245009-YJ7R5JNQ7754VMHVSVKP/Haus_Left.gif" height="186px" width="254px">
+
+    <h1>Quem vai ser o robo?</h1>
+        
+    <label for="nome1"> Jogador 1 </label><br><br>
+    <input type="text" class="nome1" value="Vayne"><br><br>
+
+    <label for="nome1"> Jogador 2 </label><br><br>
+    <input type="text" class="nome2" value="Malquis"><br><br>
+
+    <label for="nome1"> Jogador 3 </label><br><br>
+    <input type="text" class="nome3" value="Gont"><br><br>
+
+    <label for="nome1"> Jogador 4 </label><br><br>
+    <input type="text" class="nome4" value="Axie"><br><br><br>
+    
+    <button type="button" onclick="sortear()">Sortear</button>
+    </form>
+
+    <div class="footer">
+        <p>&copy; 2024 | Malquis. Todos os direitos reservados.</p>
+    </div>
+
+</body>
+</html>
